@@ -1,7 +1,9 @@
 {
   "compileOnSave": false,
+  "enableIvy": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "rootDir":".",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -9,15 +11,23 @@
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "typeRoots": ["node_modules/@types"],
     "importHelpers": true,
     "target": "es2015",
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "path": {
+    "@jarvis-im/dashboards": ["libs/insight-dashboards/src/public-api.ts"]
+  },
+  "exclude": ["node_modules", "tmp"]
 }

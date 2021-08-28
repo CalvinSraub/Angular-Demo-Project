@@ -1,0 +1,4 @@
+<h1>test</h1>
+<ng-template #loading>loading...</ng-template>
+<ng-template #error>loading failed...</ng-template>
+<ax-lazy-element [loadedHook]="this" #wc *axLazyElementDynamic="tag; url: url; module: true; loadingTemplate: loading; errorTemplate: error"></ax-lazy-element>
